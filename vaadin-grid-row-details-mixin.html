@@ -21,6 +21,7 @@
 
   /**
    * @polymerMixin
+   * @namespace Vaadin.Grid
    */
   Vaadin.Grid.RowDetailsMixin = superClass => class RowDetailsMixin extends superClass {
     static get properties() {
@@ -53,7 +54,7 @@
       super.ready();
       this._rowDetailsTemplate = this.querySelector('template.row-details');
       if (this._rowDetailsTemplate) {
-        var templatizer = new vaadin.elements.grid.Templatizer();
+        const templatizer = new window.Vaadin.Grid.GridTemplatizer();
         templatizer.dataHost = this.dataHost;
         templatizer.template = this._rowDetailsTemplate;
         this._rowDetailsTemplate.templatizer = templatizer;

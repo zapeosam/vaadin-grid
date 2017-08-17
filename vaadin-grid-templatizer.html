@@ -1,10 +1,14 @@
 <link rel="import" href="../polymer/polymer.html">
 
 <script>
-  window.vaadin = window.vaadin || {};
-  vaadin.elements = vaadin.elements || {};
-  vaadin.elements.grid = vaadin.elements.grid || {};
-  vaadin.elements.grid.Templatizer = Polymer({
+  window.Vaadin = window.Vaadin || {};
+  Vaadin.Grid = Vaadin.Grid || {};
+
+  /**
+   * @polymerMixin
+   * @namespace Vaadin.Grid
+   */
+  Vaadin.Grid.GridTemplatizer = Polymer({
     is: 'vaadin-grid-templatizer',
 
     behaviors: [Polymer.Templatizer],
@@ -82,7 +86,7 @@
         // We don’t need a change notification for these.
         return;
       }
-      
+
       // Notify for only user-action changes, not for scrolling updates. E. g.,
       // if `expanded` is different from `__expanded__`, which was set during render.
       var originalProp = `__${prop}__`;

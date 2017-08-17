@@ -183,7 +183,7 @@ This program is available under Apache License Version 2.0, available at https:/
 
     _prepareTemplatizer(template, instanceProps) {
       if (template && !template.templatizer) {
-        const templatizer = new vaadin.elements.grid.Templatizer();
+        const templatizer = new window.Vaadin.Grid.GridTemplatizer();
         templatizer._grid = this._grid;
         templatizer.dataHost = this.dataHost;
         templatizer._instanceProps = instanceProps || templatizer._instanceProps;
@@ -434,10 +434,15 @@ This program is available under Apache License Version 2.0, available at https:/
 
     customElements.define(GridColumnElement.is, GridColumnElement);
 
-    /**
-     * @namespace Vaadin
-     */
-    Vaadin.GridColumnElement = GridColumnElement;
+     window.Vaadin = window['Vaadin'] || {};
+     window.Vaadin.Grid = window['Vaadin']['Grid'] || {};
+     window.Polymer = window['Polymer'] || {};
+
+
+     /**
+      * @namespace Vaadin.Grid
+      */
+     Vaadin.Grid.GridColumnElement = GridColumnElement;
   }
   </script>
 </dom-module>

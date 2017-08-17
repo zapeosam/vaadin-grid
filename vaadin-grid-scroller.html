@@ -148,4 +148,12 @@
   }
 
   customElements.define(VaadinGridScroller.is, VaadinGridScroller);
+
+  window.Vaadin = window.Vaadin || {};
+  Vaadin.Grid = Vaadin.Grid || {};
+
+  /**
+   * @namespace Vaadin.Grid
+   */
+  Vaadin.Grid.VaadinGridScroller = VaadinGridScroller;
 </script>
