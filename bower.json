@@ -58,7 +58,8 @@
     "iron-a11y-announcer": "^v2.0.0",
     "vaadin-themable-mixin": "^1.1.0",
     "vaadin-checkbox": "^1.0.0",
-    "vaadin-text-field": "^1.0.0"
+    "vaadin-text-field": "^1.0.0",
+    "vaadin-usage-statistics": "vaadin/vaadin-usage-statistics#master"
   },
   "resolutions": {
     "iron-doc-viewer": "^3.0.0"
