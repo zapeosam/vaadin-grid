@@ -6,11 +6,10 @@
       }
     </style>
 
-
     <h3>Basic Binding</h3>
     <p>
       Cells contents can be defined using <code>&lt;template&gt;</code> elements.
-      Inside templates, variables like <code>[[index]]</code> and <code>[[item.prop]]</code>
+      Inside templates, variables like <code>index</code> and <code>item.prop</code>
       can be used to add dynamic content.
     </p>
     <p>
@@ -21,10 +20,8 @@
       <template preserve-content>
         <dom-bind>
           <template>
-            <!-- Fetch an array of users to be shown in the grid -->
             <iron-ajax auto url="https://demo.vaadin.com/demo-data/1.0/people?count=200" handle-as="json" last-response="{{users}}"></iron-ajax>
 
-            <!-- The array is set as the <vaadin-grid>'s "items" property -->
             <vaadin-grid aria-label="Basic Binding Example" items="[[users.result]]">
 
               <vaadin-grid-column width="60px" flex-grow="0">
@@ -60,6 +57,38 @@
       </template>
     </vaadin-demo-snippet>
 
+    <h3>Grid with Simple Columns</h3>
+    <p>
+      <code>&lt;vaadin-grid-simple-column&gt;</code> is a helper element that comes with shorthands
+      for configuring column headers and body cell content as well as features like sorting, filtering
+      and expandability without having to provide <code>&lt;template&gt;</code> elements.
+    </p>
+    <p>
+      The following example shows the very minimal configuration with just the <code>path</code>
+      property defined. More examples on using <code>&lt;vaadin-grid-simple-column&gt;</code> can be found
+      in the other demos and the element's API documentation.
+    </p>
+    <p>
+      <b>NOTE: You must explicitly import the <code>vaadin-grid-simple-column.html</code> in order to use <code>&lt;vaadin-grid-simple-column&gt;</code>.</b>
+    </p>
+
+    <vaadin-demo-snippet id='grid-basic-demos-simple-columns'>
+      <template preserve-content>
+        <dom-bind>
+          <template>
+            <!-- Fetch an array of users to be shown in the grid -->
+            <iron-ajax auto url="https://demo.vaadin.com/demo-data/1.0/people?count=200" handle-as="json" last-response="{{users}}"></iron-ajax>
+
+            <!-- The array is set as the <vaadin-grid>'s "items" property -->
+            <vaadin-grid items="[[users.result]]">
+              <vaadin-grid-simple-column path="firstName"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="lastName"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="address.city"></vaadin-grid-simple-column>
+            </vaadin-grid>
+          </template>
+        </dom-bind>
+      </template>
+    </vaadin-demo-snippet>
 
     <h3>Two-Way Binding</h3>
     <p>

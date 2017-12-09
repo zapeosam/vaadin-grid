@@ -44,35 +44,16 @@
               <vaadin-grid-column-group>
                 <template class="header">Name</template>
 
-                <vaadin-grid-column width="calc(25% - 20px)">
-                  <template class="header">First</template>
-                  <template>[[item.name.first]]</template>
-                </vaadin-grid-column>
-
-                <vaadin-grid-column width="calc(25% - 20px)">
-                  <template class="header">Last</template>
-                  <template>[[item.name.last]]</template>
-                </vaadin-grid-column>
+                <vaadin-grid-simple-column path="name.first" width="calc(25% - 20px)"></vaadin-grid-simple-column>
+                <vaadin-grid-simple-column path="name.last" width="calc(25% - 20px)"></vaadin-grid-simple-column>
               </vaadin-grid-column-group>
-
 
               <vaadin-grid-column-group>
                 <template class="header">Location</template>
 
-                <vaadin-grid-column width="calc(25% - 20px)">
-                  <template class="header">City</template>
-                  <template>[[item.location.city]]</template>
-                </vaadin-grid-column>
-
-                <vaadin-grid-column width="calc(25% - 20px)">
-                  <template class="header">State</template>
-                  <template>[[item.location.state]]</template>
-                </vaadin-grid-column>
-
-                <vaadin-grid-column width="200px">
-                  <template class="header">Street</template>
-                  <template><p style="white-space: normal">[[item.location.street]]</p></template>
-                </vaadin-grid-column>
+                <vaadin-grid-simple-column path="location.city" width="calc(25% - 20px)"></vaadin-grid-simple-column>
+                <vaadin-grid-simple-column path="location.state" width="calc(25% - 20px)"></vaadin-grid-simple-column>
+                <vaadin-grid-simple-column path="location.street" width="200px"></vaadin-grid-simple-column>
               </vaadin-grid-column-group>
 
             </vaadin-grid>
@@ -114,20 +95,9 @@
                 </template>
               </vaadin-grid-column>
 
-              <vaadin-grid-column width="33%">
-                <template class="header">First Name</template>
-                <template>[[item.name.first]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column width="33%">
-                <template class="header">Last Name</template>
-                <template>[[item.name.last]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column width="33%">
-                <template class="header">Email</template>
-                <template>[[item.email]]</template>
-              </vaadin-grid-column>
+              <vaadin-grid-simple-column path="name.first" title="First Name" width="33%"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="name.last" title="Last Name" width="33%"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="email" width="33%"></vaadin-grid-simple-column>
 
             </vaadin-grid>
           </template>
@@ -168,20 +138,9 @@
                 </template>
               </vaadin-grid-column>
 
-              <vaadin-grid-column width="33%">
-                <template class="header">First Name</template>
-                <template>[[item.name.first]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column width="33%">
-                <template class="header">Last Name</template>
-                <template>[[item.name.last]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column width="33%">
-                <template class="header">Email</template>
-                <template>[[item.email]]</template>
-              </vaadin-grid-column>
+              <vaadin-grid-simple-column path="name.first" title="First Name" width="33%"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="name.last" title="Last Name" width="33%"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="email" width="33%"></vaadin-grid-simple-column>
 
             </vaadin-grid>
           </template>
@@ -227,34 +186,16 @@
               <vaadin-grid-column-group resizable>
                 <template class="header">Name</template>
 
-                <vaadin-grid-column width="calc(25% - 20px)">
-                  <template class="header">First</template>
-                  <template>[[item.name.first]]</template>
-                </vaadin-grid-column>
-
-                <vaadin-grid-column width="calc(25% - 20px)">
-                  <template class="header">Last</template>
-                  <template>[[item.name.last]]</template>
-                </vaadin-grid-column>
+                <vaadin-grid-simple-column path="name.first" width="calc(25% - 20px)"></vaadin-grid-simple-column>
+                <vaadin-grid-simple-column path="name.last" width="calc(25% - 20px)"></vaadin-grid-simple-column>
               </vaadin-grid-column-group>
 
               <vaadin-grid-column-group resizable>
                 <template class="header">Location</template>
 
-                <vaadin-grid-column width="calc(25% - 20px)">
-                  <template class="header">City</template>
-                  <template>[[item.location.city]]</template>
-                </vaadin-grid-column>
-
-                <vaadin-grid-column width="calc(25% - 20px)">
-                  <template class="header">State</template>
-                  <template>[[item.location.state]]</template>
-                </vaadin-grid-column>
-
-                <vaadin-grid-column width="200px" resizable>
-                  <template class="header">Street</template>
-                  <template>[[item.location.street]]</template>
-                </vaadin-grid-column>
+                <vaadin-grid-simple-column path="location.city" width="calc(25% - 20px)"></vaadin-grid-simple-column>
+                <vaadin-grid-simple-column path="location.state" width="calc(25% - 20px)"></vaadin-grid-simple-column>
+                <vaadin-grid-simple-column path="location.street" width="200px"></vaadin-grid-simple-column>
               </vaadin-grid-column-group>
 
             </vaadin-grid>

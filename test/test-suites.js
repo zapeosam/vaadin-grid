@@ -29,6 +29,7 @@ window.VaadinGridSuites = [
   'scroll-to-index.html',
   'scrolling-mode.html',
   'selecting.html',
+  'simple-column.html',
   'sorting.html',
   'style-scope.html',
   'templates.html'

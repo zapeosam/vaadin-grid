@@ -57,19 +57,8 @@
 
             <vaadin-grid id="grid" page-size="10" height-by-rows>
 
-              <vaadin-grid-column>
-                <template class="header">First Name</template>
-                <template>
-                  [[item.name.first]]
-                </template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column>
-                <template class="header">Last Name</template>
-                <template>
-                  [[item.name.last]]
-                </template>
-              </vaadin-grid-column>
+              <vaadin-grid-simple-column path="name.first" title="First Name"></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="name.last" title="Last Name"></vaadin-grid-simple-column>
 
               <vaadin-grid-column width="200px">
                 <template class="header">Email</template>

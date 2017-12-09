@@ -90,19 +90,8 @@
                 <template>[[index]]</template>
               </vaadin-grid-column>
 
-              <vaadin-grid-column>
-                <template class="header">
-                  <vaadin-grid-sorter path="firstName">First Name</vaadin-grid-sorter>
-                </template>
-                <template>[[item.firstName]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column>
-                <template class="header">
-                  <vaadin-grid-sorter path="lastName">Last Name</vaadin-grid-sorter>
-                </template>
-                <template>[[item.lastName]]</template>
-              </vaadin-grid-column>
+              <vaadin-grid-simple-column path="firstName" sortable></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="lastName" sortable></vaadin-grid-simple-column>
 
             </vaadin-grid>
           </template>
@@ -216,23 +205,8 @@
                 <template>[[index]]</template>
               </vaadin-grid-column>
 
-              <vaadin-grid-column>
-                <template class="header">
-                  <vaadin-grid-filter aria-label="Fist Name" path="firstName" value="[[_filterFirstName]]">
-                    <vaadin-text-field slot="filter" placeholder="First Name" value="{{_filterFirstName}}" focus-target></vaadin-text-field>
-                  </vaadin-grid-filter>
-                </template>
-                <template>[[item.firstName]]</template>
-              </vaadin-grid-column>
-
-              <vaadin-grid-column>
-                <template class="header">
-                  <vaadin-grid-filter aria-label="Last Name" path="lastName" value="[[_filterLastName]]">
-                    <vaadin-text-field slot="filter" placeholder="Last Name" value="{{_filterLastName}}" focus-target></vaadin-text-field>
-                  </vaadin-grid-filter>
-                </template>
-                <template>[[item.lastName]]</template>
-              </vaadin-grid-column>
+              <vaadin-grid-simple-column path="firstName" filterable></vaadin-grid-simple-column>
+              <vaadin-grid-simple-column path="lastName" filterable></vaadin-grid-simple-column>
 
             </vaadin-grid>
           </template>
