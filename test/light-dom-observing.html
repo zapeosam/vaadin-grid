@@ -698,9 +698,11 @@
         function shouldSupportEffectiveChildren(inGroup) {
           describe('children mutations', () => {
             describe('with columns', () => {
-              beforeEach(() => {
-
-                init('effective-children-columns', {inGroup: inGroup});
+              beforeEach(done => {
+                HTMLImports.whenReady(() => {
+                  init('effective-children-columns', {inGroup: inGroup});
+                  done();
+                });
               });
 
               it('should provide initial state', done => {
@@ -741,10 +743,12 @@
             describe('with groups', () => {
               let firstGroup;
 
-              beforeEach(() => {
-
-                init('effective-children-groups', {inGroup: inGroup});
-                firstGroup = Polymer.dom(wrapper).querySelector('vaadin-grid-column-group');
+              beforeEach(done => {
+                HTMLImports.whenReady(() => {
+                  init('effective-children-groups', {inGroup: inGroup});
+                  firstGroup = Polymer.dom(wrapper).querySelector('vaadin-grid-column-group');
+                  done();
+                });
               });
 
               it('should provide initial state', done => {
@@ -784,10 +788,12 @@
           describe('nested group mutations', () => {
             let firstGroup;
 
-            beforeEach(() => {
-
-              init('effective-children-groups', {inGroup: inGroup});
-              firstGroup = Polymer.dom(wrapper).querySelector('vaadin-grid-column-group');
+            beforeEach(done => {
+              HTMLImports.whenReady(() => {
+                init('effective-children-groups', {inGroup: inGroup});
+                firstGroup = Polymer.dom(wrapper).querySelector('vaadin-grid-column-group');
+                done();
+              });
             });
 
             describe('with columns', () => {

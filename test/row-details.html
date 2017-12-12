@@ -161,11 +161,14 @@
 
       describe('inside a parent scope', () => {
 
-        beforeEach(() => {
-          grid = fixture('with-scope').$.grid;
-          grid.items = ['foo', 'bar', 'baz'];
-          flushGrid(grid);
-          bodyRows = getRows(grid.$.items);
+        beforeEach(done => {
+          HTMLImports.whenReady(() => {
+            grid = fixture('with-scope').$.grid;
+            grid.items = ['foo', 'bar', 'baz'];
+            flushGrid(grid);
+            bodyRows = getRows(grid.$.items);
+            done();
+          });
         });
 
         it('should have the correct index on details template', () => {
