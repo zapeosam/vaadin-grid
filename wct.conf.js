@@ -71,8 +71,18 @@ module.exports = {
       };*/
     }
   },
-
   plugins: {
+    'local': {
+      browserOptions: {
+        chrome: [
+          'headless',
+          'disable-gpu'
+        ],
+        firefox: [
+          '-headless'
+        ]
+      }
+    },
     'random-output': true
   }
 };
